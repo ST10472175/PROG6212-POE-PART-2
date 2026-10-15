@@ -21,8 +21,8 @@ namespace RaceDay.Api.Controllers
         {//start of constructor
             _db = db;
         }//end of constructor
-
-        /// Enter an event by selecting a category (Participants only)
+        //
+        // Enter an event by selecting a category (Participants only)
         
         [HttpPost("events/{eventId:int}/enrolments")]
         [ProducesResponseType(typeof(EnrolmentResponse), StatusCodes.Status201Created)]
