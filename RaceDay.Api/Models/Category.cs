@@ -8,6 +8,7 @@ namespace RaceDay.Api.Models
         //database columns are categoryId, categoryName and eventId
         public int CategoryId { get; set; }
 
+        //max length to enter name
         [Required]
         [MaxLength(100)]
         public string CategoryName { get; set; }
