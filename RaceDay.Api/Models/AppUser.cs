@@ -4,7 +4,7 @@ namespace RaceDay.Api.Models
 {//start of namespace
     public class AppUser
     {//start of class
-
+        //each of these are defined using entity models in part 1
         //login account table (added to the Part 1 ERD so that
         //the login details and role are stored in one place)
         //database columns are userId, email, passwordHash, role, organiserId and participantId
