@@ -230,6 +230,7 @@ namespace RaceDay.Api.Controllers
         private EventResponse MakeResponse(Event ev)
         {//start of method
 
+            //declaration
             EventResponse response = new EventResponse();
             response.EventId = ev.EventId;
             response.EventName = ev.EventName;
