@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using RaceDay.Api.Models;
 
 namespace RaceDay.Api.Data
-{
+{//start of namespace
     public class RaceDayContext : DbContext
-    {
+    {//start of class
         // Constructor that receives the connection settings from Program.cs
         public RaceDayContext(DbContextOptions<RaceDayContext> options)
             : base(options)
