@@ -87,7 +87,7 @@ namespace RaceDay.Api.Controllers
         }//end of method
 
         //method to make sure the user is logged in
-        //it returns null when everything is fine, otherwise the error to send back
+        //it returns null when everything is fine
         protected IActionResult CheckLoggedIn()
         {//start of method
 
