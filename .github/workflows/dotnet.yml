@@ -1,0 +1,53 @@
+name: RaceDay CI
+
+# runs on every push and pull request
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      # fails the build if a required file or folder is missing
+      - name: Validate repository structure
+        run: |
+          missing=0
+          for path in \
+            README.md \
+            RaceDay.sln \
+            RaceDay.Api/RaceDay.Api.csproj \
+            RaceDay.Api/Program.cs \
+            RaceDay.Api/Controllers \
+            RaceDay.Api/Models \
+            RaceDay.Api/Data \
+            RaceDay.Api/Dtos \
+            RaceDay.Tests/RaceDay.Tests.csproj \
+            .github/workflows/dotnet.yml
+          do
+            if [ ! -e "$path" ]; then
+              echo "Missing required path: $path"
+              missing=1
+            else
+              echo "Found: $path"
+            fi
+          done
+          exit $missing
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore RaceDay.sln
+
+      - name: Build
+        run: dotnet build RaceDay.sln --configuration Release --no-restore
+
+      - name: Run unit tests
+        run: dotnet test RaceDay.sln --configuration Release --no-build --verbosity normal
