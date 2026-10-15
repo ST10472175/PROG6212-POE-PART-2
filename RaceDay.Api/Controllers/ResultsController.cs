@@ -18,7 +18,7 @@ namespace RaceDay.Api.Controllers
         //object used to talk to the database
         private readonly RaceDayContext _db;
 
-        //the format the finish time must be typed in (hours:minutes:seconds)
+        //the format the finish time 
         private const string TimeFormat = @"hh\:mm\:ss";
 
         public ResultsController(RaceDayContext db)
