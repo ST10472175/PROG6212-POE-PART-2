@@ -40,6 +40,7 @@ namespace RaceDay.Api.Controllers
             string chosenRole = request.Role.Trim().ToLower();
             string role = "";
 
+            //if statement attributions: https://www.w3schools.com/cs/cs_conditions.php
             if (chosenRole == "organiser")
             {//start of if
                 role = Roles.Organiser;
