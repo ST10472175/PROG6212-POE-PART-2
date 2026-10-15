@@ -157,6 +157,7 @@ namespace RaceDay.Api.Controllers
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
+        //method to delete any events in a category
         public async Task<IActionResult> DeleteCategory(int categoryId)
         {//start of method
 
