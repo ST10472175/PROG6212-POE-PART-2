@@ -69,6 +69,8 @@ namespace RaceDay.Api.Controllers
             string email = request.Email.Trim().ToLower();
             bool emailExists = await _db.Users.AnyAsync(u => u.Email == email);
 
+
+            //if statement attributions: https://www.w3schools.com/cs/cs_conditions.php
             if (emailExists == true)
             {//start of if
                 return Conflict("An account with this email already exists.");
@@ -121,6 +123,8 @@ namespace RaceDay.Api.Controllers
                 .Include(u => u.Participant)
                 .FirstOrDefaultAsync(u => u.Email == email);
 
+
+            //if statement attributions: https://www.w3schools.com/cs/cs_conditions.php
             if (user == null)
             {//start of if
                 return Unauthorized("Invalid email or password.");
@@ -129,6 +133,8 @@ namespace RaceDay.Api.Controllers
             //check the password against the hash
             bool passwordCorrect = BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash);
 
+
+            //if statement attributions: https://www.w3schools.com/cs/cs_conditions.php
             if (passwordCorrect == false)
             {//start of if
                 return Unauthorized("Invalid email or password.");
