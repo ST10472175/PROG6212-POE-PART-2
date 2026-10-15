@@ -14,9 +14,11 @@ namespace RaceDay.Api.Models
         [MaxLength(256)]
         public string Email { get; set; }
 
-        //the password is hashed with BCrypt, the original password is never stored
-        [Required]
-        public string PasswordHash { get; set; }
+        // The password is hashed with BCrypt; the original password is never stored.
+// A length limit helps keep the stored hash within a defined size.
+[Required]
+[MaxLength(100)]
+public string PasswordHash { get; set; }
 
         [Required]
         [MaxLength(20)]
