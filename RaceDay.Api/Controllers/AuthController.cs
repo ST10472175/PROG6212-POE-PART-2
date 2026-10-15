@@ -27,7 +27,7 @@ namespace RaceDay.Api.Controllers
             _config = config;
         }//end of constructor
 
-        //Registration  for users to select their roles
+        //Registration for users to pick their roles
         [HttpPost("register")]
         [ProducesResponseType(typeof(AuthResponse), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
