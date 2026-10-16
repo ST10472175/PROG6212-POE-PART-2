@@ -5,6 +5,7 @@ using RaceDay.Api.Data;
 using RaceDay.Api.Dtos;
 using RaceDay.Api.Models;
 
+//this unit test class is to test all authentication needed in the begining all the way to the end
 namespace RaceDay.Tests
 {//start of namespace
 

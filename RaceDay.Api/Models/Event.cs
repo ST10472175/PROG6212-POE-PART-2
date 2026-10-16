@@ -30,7 +30,7 @@ namespace RaceDay.Api.Models
         public EventType EventType { get; set; }
 
        
-        //(one organiser creates many events)
+        //(one organiser creates many events | link with ERD)
         public int OrganiserId { get; set; }
         public EventOrganiser Organiser { get; set; }
 
