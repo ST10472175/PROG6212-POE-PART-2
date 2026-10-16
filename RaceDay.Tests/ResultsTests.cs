@@ -2,6 +2,7 @@ using System.Net;
 using RaceDay.Api.Dtos;
 using RaceDay.Api.Models;
 
+//results class test  that is for capturing and viewing results
 namespace RaceDay.Tests
 {//start of namespace
 
