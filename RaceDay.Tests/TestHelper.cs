@@ -4,6 +4,7 @@ using System.Text.Json.Serialization;
 using RaceDay.Api.Dtos;
 using RaceDay.Api.Models;
 
+//test class to verify if password hashing is successfu;
 namespace RaceDay.Tests
 {//start of namespace
 
