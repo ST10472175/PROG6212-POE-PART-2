@@ -8,9 +8,6 @@ using RaceDay.Api.Data;
 namespace RaceDay.Tests
 {//start of namespace
 
-    //this class starts the real API in memory for the tests
-    //SQL Server is replaced with an in-memory database so the tests
-    //do not need a database server (they also run on GitHub Actions)
     public class RaceDayFactory : WebApplicationFactory<Program>
     {//start of class
 
