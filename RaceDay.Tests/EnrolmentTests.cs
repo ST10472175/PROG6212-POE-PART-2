@@ -5,6 +5,7 @@ using RaceDay.Api.Data;
 using RaceDay.Api.Dtos;
 using RaceDay.Api.Models;
 
+//unit test class for enrollment
 namespace RaceDay.Tests
 {//start of namespace
 
