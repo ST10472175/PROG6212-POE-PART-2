@@ -155,7 +155,7 @@ namespace RaceDay.Tests
 
         }//end of method
 
-        //method to make result data
+        //method to make result data is avaiable
         public static ResultRequest NewResultRequest(int participantId, int position, string time)
         {//start of method
 
